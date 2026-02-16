@@ -4,7 +4,8 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   output: 'export',
-  basePath: '/Portfolio',
+  basePath: '/Portfolio',   // your GitHub repo name
+  assetPrefix: '/Portfolio/',
 }
 
 export default nextConfig
