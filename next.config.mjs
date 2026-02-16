@@ -5,7 +5,8 @@ const nextConfig = {
   },
   output: 'export',
   basePath: '/Portfolio',   // your GitHub repo name
-  assetPrefix: '/Portfolio/',
+  assetPrefix: './',
+  trailingSlash: true,
 }
 
 export default nextConfig
