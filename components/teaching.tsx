@@ -1,47 +1,16 @@
-import { Presentation, Calendar } from "lucide-react"
+import { Presentation, Calendar, Github } from "lucide-react"
 import { SectionLabel } from "./about"
 
 const talks = [
   {
-    title: "Hands-On Computer Vision with OpenCV & Python",
-    venue: "IEEE Student Chapter Workshop",
-    date: "March 2025",
-    type: "Workshop",
+    title: "Vision-Driven Robotics: Theory to Practice",
+    venue: "Discord",
+    date: "Feb 2026",
+    type: "Teaching",
+    github: "https://github.com/SarveshAngadi09/Robotics-CV", // Add specific repo link if needed
     description:
-      "A 3-hour workshop covering image processing fundamentals, feature detection, and real-time object tracking for 60+ attendees.",
-  },
-  {
-    title: "Deep Learning for Visual Perception in Robotics",
-    venue: "RoboCon Conference",
-    date: "November 2024",
-    type: "Talk",
-    description:
-      "Invited talk on deploying neural networks for real-time perception on edge devices, covering architecture design and TensorRT optimization.",
-  },
-  {
-    title: "Camera Calibration: Theory to Practice",
-    venue: "University Graduate Seminar",
-    date: "September 2024",
-    type: "Seminar",
-    description:
-      "Graduate-level seminar on geometric camera models, intrinsic/extrinsic calibration, and multi-view geometry fundamentals.",
-  },
-  {
-    title: "Introduction to ROS2 for Autonomous Systems",
-    venue: "Robotics Club Bootcamp",
-    date: "June 2024",
-    type: "Workshop",
-    description:
-      "Two-day intensive bootcamp introducing ROS2 concepts, including topics, services, and building a simple perception node.",
-  },
-  {
-    title: "Visual SLAM: Algorithms and Applications",
-    venue: "Tech Meetup Berlin",
-    date: "February 2024",
-    type: "Talk",
-    description:
-      "Lightning talk summarizing key visual SLAM approaches from MonoSLAM to ORB-SLAM3 with live demo on a mobile robot.",
-  },
+      "I conduct independent sessions on Computer Vision and Robotics fundamentals for students and early learners. The sessions focus on building strong intuition behind core concepts such as camera calibration, multi-view geometry, deep learning for perception, and generative models for robotics. My goal is to bridge theory and implementation — breaking down complex ideas into clear mathematical reasoning and practical code examples.",
+  }
 ]
 
 export function Teaching() {
@@ -64,6 +33,7 @@ export function Teaching() {
             >
               <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                 <div className="flex-1">
+                  
                   <div className="mb-2 flex items-center gap-3">
                     <span className="inline-flex items-center gap-1.5 rounded-md bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">
                       <Presentation className="h-3 w-3" />
@@ -74,9 +44,30 @@ export function Teaching() {
                       {talk.date}
                     </span>
                   </div>
-                  <h3 className="text-base font-semibold text-card-foreground">{talk.title}</h3>
-                  <p className="mt-1 text-sm text-muted-foreground">{talk.venue}</p>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground/80">{talk.description}</p>
+
+                  <h3 className="text-base font-semibold text-card-foreground">
+                    {talk.title}
+                  </h3>
+
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    {talk.venue}
+                  </p>
+
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground/80">
+                    {talk.description}
+                  </p>
+
+                  {/* GitHub Link */}
+                  <a
+                    href= "https://github.com/SarveshAngadi09/Robotics-CV"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-primary transition-colors hover:underline"
+                  >
+                    <Github className="h-4 w-4" />
+                    View Materials on GitHub
+                  </a>
+
                 </div>
               </div>
             </div>

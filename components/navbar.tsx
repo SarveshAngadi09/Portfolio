@@ -1,7 +1,8 @@
 "use client"
 
 import { useState } from "react"
-import { Menu, X } from "lucide-react"
+import { Menu, X, Github } from "lucide-react"
+
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -34,6 +35,7 @@ export function Navbar() {
             </li>
           ))}
         </ul>
+
 
         {/* Mobile toggle */}
         <button

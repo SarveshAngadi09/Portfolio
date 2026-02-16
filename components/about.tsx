@@ -1,4 +1,4 @@
-import { Eye, Brain, Camera, Cpu } from "lucide-react"
+import { Eye, Brain, Camera, Box } from "lucide-react"
 
 const highlights = [
   {
@@ -17,9 +17,9 @@ const highlights = [
     description: "Designing and training CNNs and transformers for object detection, segmentation, and visual place recognition.",
   },
   {
-    icon: Cpu,
-    title: "Embedded Deployment",
-    description: "Optimizing models for edge devices like NVIDIA Jetson, enabling real-time inference on resource-constrained hardware.",
+    icon: Box,
+    title: "GenAI-Powered 3D Perception",
+    description: "Applying generative models and Gaussian Splatting to enable scalable 3D scene reconstruction, immersive mapping, and real-time spatial intelligence for robotics and AR/VR applications.",
   },
 ]
 

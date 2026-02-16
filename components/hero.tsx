@@ -8,7 +8,7 @@ export function Hero() {
           Hello, I am
         </p>
         <h1 className="text-balance text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-          Alex Mercer
+          Sarvesh Angadi
         </h1>
         <h2 className="mt-4 text-xl font-medium text-foreground/80 sm:text-2xl">
           Robotics & Computer Vision Engineer
