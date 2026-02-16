@@ -4,7 +4,7 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   output: 'export',           // static HTML export
-  basePath: './',     // GitHub repo name
+  basePath: '/Portfolio',     // GitHub repo name
   assetPrefix: './',          // use relative paths for _next
   trailingSlash: true,        // ensures proper folder structure
 }
