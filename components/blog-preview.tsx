@@ -3,28 +3,22 @@ import { SectionLabel } from "./about"
 
 const posts = [
   {
-    title: "Understanding Epipolar Geometry for Stereo Vision",
+    title: "Normalizing Flows: Density Estimation via Change of Variables",
     excerpt:
-      "A practical walkthrough of epipolar constraints, fundamental matrix estimation, and how they enable depth reconstruction from two cameras.",
-    date: "Jan 2026",
+      "An intuitive and mathematical introduction to normalizing flows, explaining density estimation through invertible transformations and the change-of-variables formula.",
+    date: "Feb 2026",
     readTime: "8 min read",
-    tag: "Computer Vision",
+    tag: "Generative AI",
+    link: "https://github.com/SarveshAngadi09/Robotics-CV/tree/main/NormalizingFlows",
   },
   {
-    title: "Deploying YOLOv8 on NVIDIA Jetson: A Complete Guide",
+    title: "Basics of Camera Calibration",
     excerpt:
-      "Step-by-step guide to exporting, quantizing, and running YOLOv8 on Jetson Orin with TensorRT for real-time robotic perception.",
-    date: "Dec 2025",
-    readTime: "12 min read",
-    tag: "Deep Learning",
-  },
-  {
-    title: "Why Camera Calibration Still Matters in the Age of Neural Radiance Fields",
-    excerpt:
-      "Exploring the foundational role of accurate camera models even as NeRF and 3D Gaussian Splatting reshape 3D reconstruction.",
-    date: "Nov 2025",
+      "An intuitive and mathematical introduction to intrinsic camera calibration, covering focal length, principal point estimation, and lens distortion modeling for accurate vision-based perception.",
+    date: "Feb 2026",
     readTime: "6 min read",
     tag: "Calibration",
+    link: "https://github.com/SarveshAngadi09/Robotics-CV/tree/main/Calibration",
   },
 ]
 
@@ -42,8 +36,11 @@ export function BlogPreview() {
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {posts.map((post) => (
-            <article
+            <a
               key={post.title}
+              href={post.link}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group flex flex-col rounded-xl border border-border bg-card p-6 transition-all hover:border-primary/30 hover:shadow-sm"
             >
               <div className="mb-3 flex items-center gap-3">
@@ -65,7 +62,7 @@ export function BlogPreview() {
                   <ArrowRight className="h-3.5 w-3.5" />
                 </span>
               </div>
-            </article>
+            </a>
           ))}
         </div>
       </div>

@@ -3,47 +3,27 @@ import { SectionLabel } from "./about"
 
 const projects = [
   {
-    title: "VisualSLAM Pipeline",
+    title: "Vision-Conditioned Trajectory Generation with Flow Matching",
     description:
-      "A modular visual SLAM system combining ORB feature tracking with loop closure detection for real-time robot localization in GPS-denied environments.",
-    stack: ["C++", "OpenCV", "ROS2", "Eigen"],
-    github: "https://github.com",
+      "Implementing conditional and mean flow matching models for vision-conditioned robotic trajectory generation on the PushT dataset.",
+    stack: ["Pytorch", "Path Planning", "GenAI", "Robotics"],
+    github: "https://github.com/SarveshAngadi09/TrajectoryGenerationFlowmatching",
   },
   {
-    title: "Multi-Camera Calibration Toolkit",
+    title: "Adversarial Attacks in Neural Networks",
     description:
-      "An open-source calibration framework for multi-camera rigs supporting fisheye, pinhole, and omnidirectional models with sub-pixel accuracy.",
-    stack: ["Python", "NumPy", "OpenCV", "Ceres Solver"],
-    github: "https://github.com",
+      "Implementation and analysis of adversarial attack strategies and defense mechanisms to study robustness in deep neural networks.",
+    stack: ["Python", "Pytorch", "OpenCV", "Neural Networks"],
+    github: "https://github.com/SarveshAngadi09/DLadversarialattack",
   },
   {
-    title: "Real-Time Object Detection on Jetson",
+    title: "Mapping facial features and hand gestures",
     description:
-      "Optimized YOLOv8 deployment pipeline for NVIDIA Jetson AGX Orin, achieving 45 FPS inference with TensorRT quantization.",
-    stack: ["Python", "PyTorch", "TensorRT", "CUDA"],
-    github: "https://github.com",
+      "Implementation of face and palm detection using mediapipe and openCV",
+    stack: ["Python","mediapipe", "OpenCV"],
+    github: "https://github.com/SarveshAngadi09/Face-Hand-Interaction-Computer-vision",
   },
-  {
-    title: "Point Cloud Segmentation",
-    description:
-      "A PointNet++-based model for semantic segmentation of outdoor LiDAR scenes, trained on custom annotated datasets for autonomous navigation.",
-    stack: ["Python", "PyTorch", "Open3D", "ROS2"],
-    github: "https://github.com",
-  },
-  {
-    title: "Visual Place Recognition",
-    description:
-      "NetVLAD-inspired retrieval system for robust visual place recognition across seasons and lighting conditions using learned descriptors.",
-    stack: ["Python", "PyTorch", "FAISS", "HDF5"],
-    github: "https://github.com",
-  },
-  {
-    title: "Stereo Depth Estimation",
-    description:
-      "End-to-end stereo matching network with cost volume aggregation and disparity refinement for dense depth maps on embedded hardware.",
-    stack: ["Python", "PyTorch", "ONNX", "OpenCV"],
-    github: "https://github.com",
-  },
+  
 ]
 
 export function Projects() {
@@ -95,7 +75,7 @@ export function Projects() {
 
         <div className="mt-10 text-center">
           <a
-            href="https://github.com"
+            href="https://github.com/SarveshAngadi09"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm font-medium text-primary transition-colors hover:text-primary/80"
