@@ -19,7 +19,7 @@ export function Hero() {
 
         <div className="mt-8 flex items-center justify-center gap-4">
           <a
-            href="https://github.com"
+            href="https://github.com/sarveshangadi09"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg bg-foreground px-5 py-2.5 text-sm font-medium text-background transition-opacity hover:opacity-90"
@@ -28,7 +28,7 @@ export function Hero() {
             GitHub
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/sarvesh-angadi-067375154/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg border border-border px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-muted"

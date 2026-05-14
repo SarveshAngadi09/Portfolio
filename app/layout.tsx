@@ -7,8 +7,20 @@ const _inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const _jetbrains = JetBrains_Mono({ subsets: ['latin'], variable: '--font-jetbrains' })
 
 export const metadata: Metadata = {
-  title: 'Portfolio | Robotics & Computer Vision Engineer',
-  description: 'Personal portfolio of a Robotics & Computer Vision engineer specializing in perception systems, deep learning, and camera calibration.',
+  title: 'Sarvesh Angadi | Robotics & Computer Vision Engineer',
+  description: 'Personal portfolio of Sarvesh Angadi — Robotics & Computer Vision engineer specializing in perception systems, deep learning, and camera calibration.',
+  openGraph: {
+    title: 'Sarvesh Angadi | Robotics & Computer Vision Engineer',
+    description: 'Personal portfolio of Sarvesh Angadi — Robotics & Computer Vision engineer specializing in perception systems, deep learning, and camera calibration.',
+    url: 'https://sarveshangadi09.github.io/Portfolio',
+    siteName: 'Sarvesh Angadi',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Sarvesh Angadi | Robotics & Computer Vision Engineer',
+    description: 'Robotics & Computer Vision engineer specializing in perception systems, deep learning, and camera calibration.',
+  },
 }
 
 export default function RootLayout({

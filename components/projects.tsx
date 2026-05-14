@@ -3,27 +3,37 @@ import { SectionLabel } from "./about"
 
 const projects = [
   {
+    title: "6DoF Pose Estimation for Industrial Grasping",
+    description:
+      "MSc thesis benchmarking state-of-the-art 6DoF object pose estimation methods for industrial bin-picking and grasping. Evaluates transformer-based and render-and-compare approaches across synthetic and real-world data, with a focus on sim-to-real transfer and deployment on NVIDIA Jetson edge hardware.",
+    stack: ["PyTorch", "ROS2", "6DoF Pose", "TensorRT", "Sim-to-Real"],
+    github: null,
+    inProgress: true,
+  },
+  {
+    title: "Depth-Aware Few-Shot Action Recognition",
+    description:
+      "Developing a few-shot action recognition system that leverages depth information to improve generalisation to unseen action classes. Explores metric learning and depth-conditioned feature representations for robust human action understanding from limited labelled examples.",
+    stack: ["PyTorch", "Few-Shot Learning", "Depth Estimation", "Action Recognition"],
+    github: null,
+    inProgress: true,
+  },
+  {
     title: "Vision-Conditioned Trajectory Generation with Flow Matching",
     description:
-      "Implementing conditional and mean flow matching models for vision-conditioned robotic trajectory generation on the PushT dataset.",
-    stack: ["Pytorch", "Path Planning", "GenAI", "Robotics"],
+      "Conditional and mean flow matching models for vision-conditioned robotic trajectory generation. Trained and evaluated on the PushT dataset, demonstrating smooth, multimodal trajectory distributions guided by visual observations.",
+    stack: ["PyTorch", "Flow Matching", "GenAI", "Robotics"],
     github: "https://github.com/SarveshAngadi09/TrajectoryGenerationFlowmatching",
+    inProgress: false,
   },
   {
     title: "Adversarial Attacks in Neural Networks",
     description:
-      "Implementation and analysis of adversarial attack strategies and defense mechanisms to study robustness in deep neural networks.",
-    stack: ["Python", "Pytorch", "OpenCV", "Neural Networks"],
+      "Implementation and analysis of adversarial attack strategies (FGSM, PGD, C&W) and defence mechanisms to study robustness of deep neural networks under distribution shift.",
+    stack: ["Python", "PyTorch", "OpenCV", "Deep Learning"],
     github: "https://github.com/SarveshAngadi09/DLadversarialattack",
+    inProgress: false,
   },
-  {
-    title: "Mapping facial features and hand gestures",
-    description:
-      "Implementation of face and palm detection using mediapipe and openCV",
-    stack: ["Python","mediapipe", "OpenCV"],
-    github: "https://github.com/SarveshAngadi09/Face-Hand-Interaction-Computer-vision",
-  },
-  
 ]
 
 export function Projects() {
@@ -44,17 +54,26 @@ export function Projects() {
               key={project.title}
               className="group flex flex-col rounded-xl border border-border bg-card p-6 transition-all hover:border-primary/30 hover:shadow-sm"
             >
-              <div className="mb-3 flex items-center justify-between">
+              <div className="mb-3 flex items-start justify-between gap-2">
                 <h3 className="text-base font-semibold text-card-foreground">{project.title}</h3>
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground transition-colors hover:text-primary"
-                  aria-label={`View ${project.title} on GitHub`}
-                >
-                  <Github className="h-4 w-4" />
-                </a>
+                <div className="flex shrink-0 items-center gap-2">
+                  {project.inProgress && (
+                    <span className="rounded-md bg-amber-500/10 px-2 py-0.5 font-mono text-xs text-amber-500">
+                      In Progress
+                    </span>
+                  )}
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground transition-colors hover:text-primary"
+                      aria-label={`View ${project.title} on GitHub`}
+                    >
+                      <Github className="h-4 w-4" />
+                    </a>
+                  )}
+                </div>
               </div>
               <p className="flex-1 text-sm leading-relaxed text-muted-foreground">
                 {project.description}

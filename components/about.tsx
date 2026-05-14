@@ -1,25 +1,25 @@
-import { Eye, Brain, Camera, Box } from "lucide-react"
+import { Layers, Crosshair, Cpu, Brain } from "lucide-react"
 
 const highlights = [
   {
-    icon: Eye,
-    title: "Perception Systems",
-    description: "Building real-time 3D perception pipelines for autonomous robots using LiDAR, stereo vision, and sensor fusion.",
+    icon: Layers,
+    title: "Stereo & 3D Perception",
+    description: "Multi-camera calibration, stereo vision, MVS, depth estimation, and point cloud processing for accurate metric 3D reconstruction in industrial environments.",
   },
   {
-    icon: Camera,
-    title: "Camera Calibration",
-    description: "Developing robust multi-camera calibration frameworks for accurate metric reconstruction in industrial environments.",
+    icon: Crosshair,
+    title: "6DoF Pose & Grasping",
+    description: "End-to-end pose estimation pipelines for industrial grasping — from synthetic data generation through sim-to-real transfer to production deployment.",
+  },
+  {
+    icon: Cpu,
+    title: "Edge Deployment",
+    description: "ONNX/TensorRT model optimization and deployment on NVIDIA Jetson hardware. Real-time vision at the edge for latency-critical robotic systems.",
   },
   {
     icon: Brain,
-    title: "Deep Learning",
-    description: "Designing and training CNNs and transformers for object detection, segmentation, and visual place recognition.",
-  },
-  {
-    icon: Box,
-    title: "GenAI-Powered 3D Perception",
-    description: "Applying generative models and Gaussian Splatting to enable scalable 3D scene reconstruction, immersive mapping, and real-time spatial intelligence for robotics and AR/VR applications.",
+    title: "Deep Learning for Robotics",
+    description: "Transformer architectures (ViT, VLM, VLA), diffusion models, and metric learning applied to robot perception — from detection and tracking to trajectory generation.",
   },
 ]
 
@@ -29,14 +29,17 @@ export function About() {
       <div className="mx-auto max-w-5xl">
         <SectionLabel label="About" />
         <h2 className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-          Building intelligent machines that see and understand
+          Production-grade robot perception, from lab to edge hardware
         </h2>
-        <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground">
-          I am a robotics engineer with a focus on computer vision and perception.
-          My work sits at the intersection of classical geometry-based methods and modern deep learning,
-          enabling autonomous systems to interpret complex visual scenes.
-          I have contributed to research in camera calibration, visual SLAM, and learning-based
-          perception deployed on real-world robotic platforms.
+        <p className="mt-6 text-base leading-relaxed text-muted-foreground">
+          I am a Robotics MSc student at the University of Twente (graduating 2025) with over five years
+          of production experience building computer vision systems at CynLr (Cybernetics Laboratory).
+          As Lead of Algorithms & Research, I shipped stereo calibration frameworks, real-time depth
+          estimation pipelines, and visual servoing systems that went from research prototypes to
+          commercial products — including involvement in patent writing covering event-based imaging,
+          autofocus depth, and robot calibration. My current focus is 6DoF object pose estimation
+          for industrial grasping, combining classical 3D geometry with modern transformer-based
+          architectures and deploying on NVIDIA Jetson edge hardware.
         </p>
 
         <div className="mt-16 grid gap-8 sm:grid-cols-2">
