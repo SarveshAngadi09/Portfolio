@@ -1,5 +1,7 @@
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, ExternalLink } from "lucide-react"
 import { SectionLabel } from "./about"
+
+const SUBSTACK_URL = "https://sarveshangadi.substack.com"
 
 const posts = [
   {
@@ -9,7 +11,7 @@ const posts = [
     date: "Feb 2026",
     readTime: "8 min read",
     tag: "Generative AI",
-    link: "https://github.com/SarveshAngadi09/Robotics-CV/tree/main/NormalizingFlows",
+    link: SUBSTACK_URL,
   },
   {
     title: "Basics of Camera Calibration",
@@ -18,7 +20,7 @@ const posts = [
     date: "Feb 2026",
     readTime: "6 min read",
     tag: "Calibration",
-    link: "https://github.com/SarveshAngadi09/Robotics-CV/tree/main/Calibration",
+    link: SUBSTACK_URL,
   },
 ]
 
@@ -27,14 +29,25 @@ export function BlogPreview() {
     <section id="blog" className="bg-muted/50 px-6 py-24">
       <div className="mx-auto max-w-5xl">
         <SectionLabel label="Blog" />
-        <h2 className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-          Recent writing
-        </h2>
-        <p className="mt-4 max-w-xl text-base text-muted-foreground">
-          Technical notes and tutorials on topics I find interesting.
+        <div className="mt-2 flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            Recent writing
+          </h2>
+          <a
+            href={SUBSTACK_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-primary transition-colors hover:text-primary/80"
+          >
+            View all on Substack
+            <ExternalLink className="h-3.5 w-3.5" />
+          </a>
+        </div>
+        <p className="mt-4 text-base text-muted-foreground">
+          Technical notes and tutorials on computer vision, robotics, and deep learning — published on Substack.
         </p>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
           {posts.map((post) => (
             <a
               key={post.title}
@@ -58,7 +71,7 @@ export function BlogPreview() {
               <div className="mt-4 flex items-center justify-between">
                 <span className="font-mono text-xs text-muted-foreground">{post.readTime}</span>
                 <span className="inline-flex items-center gap-1 text-sm font-medium text-primary opacity-0 transition-opacity group-hover:opacity-100">
-                  Read
+                  Read on Substack
                   <ArrowRight className="h-3.5 w-3.5" />
                 </span>
               </div>

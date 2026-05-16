@@ -1,12 +1,13 @@
 "use client"
 
 import { useState } from "react"
-import { Mail, GithubIcon, LinkedinIcon, Send } from "lucide-react"
+import { Mail, GithubIcon, LinkedinIcon, Send, BookOpen } from "lucide-react"
 import { SectionLabel } from "./about"
 
 const socials = [
   { label: "GitHub", href: "https://github.com/sarveshangadi09", icon: GithubIcon },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/sarvesh-angadi-067375154/", icon: LinkedinIcon },
+  { label: "Substack", href: "https://sarveshangadi.substack.com", icon: BookOpen },
 ]
 
 export function Contact() {
