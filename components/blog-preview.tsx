@@ -5,22 +5,31 @@ const SUBSTACK_URL = "https://sarveshangadi.substack.com"
 
 const posts = [
   {
-    title: "Normalizing Flows: Density Estimation via Change of Variables",
-    excerpt:
-      "An intuitive and mathematical introduction to normalizing flows, explaining density estimation through invertible transformations and the change-of-variables formula.",
-    date: "Feb 2026",
-    readTime: "8 min read",
-    tag: "Generative AI",
-    link: SUBSTACK_URL,
-  },
-  {
     title: "Basics of Camera Calibration",
     excerpt:
-      "An intuitive and mathematical introduction to intrinsic camera calibration, covering focal length, principal point estimation, and lens distortion modeling for accurate vision-based perception.",
+      "Intrinsic calibration — focal length, principal point, and why they matter for accurate vision-based perception.",
     date: "Feb 2026",
     readTime: "6 min read",
     tag: "Calibration",
-    link: SUBSTACK_URL,
+    link: "https://sarveshangadi.substack.com/p/basics-of-camera-calibration",
+  },
+  {
+    title: "Normalizing Flows — The Intuition",
+    excerpt:
+      "Part 1: building intuition behind normalizing flows — what they are, why they work, and how invertible transformations enable density estimation.",
+    date: "Feb 2026",
+    readTime: "6 min read",
+    tag: "Generative AI",
+    link: "https://sarveshangadi.substack.com/p/normalizing-flows-the-intuition",
+  },
+  {
+    title: "Normalizing Flows — The Math",
+    excerpt:
+      "Part 2: the mathematical foundations of normalizing flows — change of variables, the Jacobian determinant, and how to compute exact likelihoods.",
+    date: "Feb 2026",
+    readTime: "8 min read",
+    tag: "Generative AI",
+    link: "https://sarveshangadi.substack.com/p/normalizing-flows-the-math",
   },
 ]
 
@@ -47,7 +56,7 @@ export function BlogPreview() {
           Technical notes and tutorials on computer vision, robotics, and deep learning — published on Substack.
         </p>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
+        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {posts.map((post) => (
             <a
               key={post.title}
