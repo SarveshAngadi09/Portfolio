@@ -11,10 +11,10 @@ export function Hero() {
           Sarvesh Angadi
         </h1>
         <h2 className="mt-4 text-xl font-medium text-foreground/80 sm:text-2xl">
-          Robotics & Computer Vision Engineer
+          Robotics Engineer — Multimodal SLAM & 3D Perception
         </h2>
         <p className="mt-3 font-mono text-sm tracking-wide text-muted-foreground">
-          Perception &middot; Learning Systems &middot; Teaching
+          SLAM &middot; Sensor Fusion &middot; 3D Perception &middot; Teaching
         </p>
 
         <div className="mt-8 flex items-center justify-center gap-4">

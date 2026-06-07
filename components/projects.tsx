@@ -3,6 +3,15 @@ import { SectionLabel } from "./about"
 
 const projects = [
   {
+    title: "Multimodal SLAM for Dynamic Industrial Environments",
+    description:
+      "MSc thesis developing robust SLAM for legged robot platforms operating in dynamic industrial settings. Fuses thermal, RGB, depth, and LiDAR sensor streams to achieve reliable localization and mapping with unannotated data, addressing moving objects, variable lighting, and sensor noise unique to industrial floors.",
+    stack: ["ROS2", "LiDAR SLAM", "Sensor Fusion", "Gaussian Splatting", "Legged Robotics"],
+    github: null,
+    inProgress: true,
+    statusLabel: "In Progress (MSc Thesis)",
+  },
+  {
     title: "6DoF Pose Estimation for Industrial Grasping",
     description:
       "MSc thesis benchmarking state-of-the-art 6DoF object pose estimation methods for industrial bin-picking and grasping. Evaluates transformer-based and render-and-compare approaches across synthetic and real-world data, with a focus on sim-to-real transfer and deployment on NVIDIA Jetson edge hardware.",
@@ -59,7 +68,7 @@ export function Projects() {
                 <div className="flex shrink-0 items-center gap-2">
                   {project.inProgress && (
                     <span className="rounded-md bg-amber-500/10 px-2 py-0.5 font-mono text-xs text-amber-500">
-                      In Progress
+                      {project.statusLabel ?? "In Progress"}
                     </span>
                   )}
                   {project.github && (

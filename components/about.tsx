@@ -8,8 +8,8 @@ const highlights = [
   },
   {
     icon: Crosshair,
-    title: "6DoF Pose & Grasping",
-    description: "End-to-end pose estimation pipelines for industrial grasping — from synthetic data generation through sim-to-real transfer to production deployment.",
+    title: "SLAM & Sensor Fusion",
+    description: "LiDAR, visual, and multimodal SLAM — fusing thermal, RGB, depth, and LiDAR data for robust localization and mapping in dynamic, unstructured environments.",
   },
   {
     icon: Cpu,
@@ -32,14 +32,14 @@ export function About() {
           Production-grade robot perception, from lab to edge hardware
         </h2>
         <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-          I am a Robotics MSc student at the University of Twente (graduating 2025) with over five years
-          of production experience building computer vision systems at CynLr (Cybernetics Laboratory).
-          As Lead of Algorithms & Research, I shipped stereo calibration frameworks, real-time depth
-          estimation pipelines, and visual servoing systems that went from research prototypes to
-          commercial products — including involvement in patent writing covering event-based imaging,
-          autofocus depth, and robot calibration. My current focus is 6DoF object pose estimation
-          for industrial grasping, combining classical 3D geometry with modern transformer-based
-          architectures and deploying on NVIDIA Jetson edge hardware.
+          I am a Robotics MSc student at the University of Twente with over five years of production
+          experience building computer vision systems at CynLr (Cybernetics Laboratory). As Lead of
+          Algorithms & Research, I shipped stereo calibration frameworks, real-time depth estimation
+          pipelines, and visual servoing systems that went from research prototypes to commercial
+          products — including involvement in patent writing covering event-based imaging, autofocus
+          depth, and robot calibration. My MSc thesis (July 2026 – Feb 2027) focuses on multimodal
+          SLAM for dynamic industrial environments — fusing thermal, RGB, depth, and LiDAR data on a
+          legged robot platform for robust localization and mapping with unannotated data.
         </p>
 
         <div className="mt-16 grid gap-8 sm:grid-cols-2">
