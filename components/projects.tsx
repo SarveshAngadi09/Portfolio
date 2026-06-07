@@ -12,14 +12,6 @@ const projects = [
     statusLabel: "In Progress (MSc Thesis)",
   },
   {
-    title: "6DoF Pose Estimation for Industrial Grasping",
-    description:
-      "MSc thesis benchmarking state-of-the-art 6DoF object pose estimation methods for industrial bin-picking and grasping. Evaluates transformer-based and render-and-compare approaches across synthetic and real-world data, with a focus on sim-to-real transfer and deployment on NVIDIA Jetson edge hardware.",
-    stack: ["PyTorch", "ROS2", "6DoF Pose", "TensorRT", "Sim-to-Real"],
-    github: null,
-    inProgress: true,
-  },
-  {
     title: "Depth-Aware Few-Shot Action Recognition",
     description:
       "Developing a few-shot action recognition system that leverages depth information to improve generalisation to unseen action classes. Explores metric learning and depth-conditioned feature representations for robust human action understanding from limited labelled examples.",
