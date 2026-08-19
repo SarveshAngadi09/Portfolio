@@ -98,7 +98,7 @@ export function Contact() {
             <div>
               <h3 className="text-sm font-semibold uppercase tracking-wider text-foreground">Resume</h3>
               <a
-                href="/Resume_UT_03.pdf"
+                href="./Resume_UT_03.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 download

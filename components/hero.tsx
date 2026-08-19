@@ -37,7 +37,7 @@ export function Hero() {
             LinkedIn
           </a>
           <a
-            href="/Resume_UT_03.pdf"
+            href="./Resume_UT_03.pdf"
             target="_blank"
             rel="noopener noreferrer"
             download
