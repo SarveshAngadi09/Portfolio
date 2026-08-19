@@ -41,7 +41,7 @@ export function Hero() {
             target="_blank"
             rel="noopener noreferrer"
             download
-            className="inline-flex items-center gap-2 rounded-lg border border-primary/40 bg-primary/5 px-5 py-2.5 text-sm font-medium text-primary transition-colors hover:bg-primary/10"
+            className="inline-flex items-center gap-2 rounded-lg border border-border px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-muted"
           >
             <Download className="h-4 w-4" />
             Resume

@@ -101,7 +101,8 @@ export function Contact() {
                 href="/Resume_UT_03.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-2 inline-flex items-center gap-2 text-base text-primary transition-colors hover:text-primary/80"
+                download
+                className="mt-2 inline-flex items-center gap-2 text-base text-foreground transition-colors hover:text-primary"
               >
                 <FileText className="h-4 w-4" />
                 View / Download Resume
