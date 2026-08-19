@@ -1,7 +1,7 @@
-"use client"
+﻿"use client"
 
 import { useState } from "react"
-import { Mail, GithubIcon, LinkedinIcon, Send, BookOpen } from "lucide-react"
+import { Mail, GithubIcon, LinkedinIcon, Send, BookOpen, FileText } from "lucide-react"
 import { SectionLabel } from "./about"
 
 const socials = [
@@ -93,6 +93,18 @@ export function Contact() {
               >
                 <Mail className="h-4 w-4" />
                 sarvesh.angadi1997@gmail.com
+              </a>
+            </div>
+            <div>
+              <h3 className="text-sm font-semibold uppercase tracking-wider text-foreground">Resume</h3>
+              <a
+                href="/Resume_UT_03.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 inline-flex items-center gap-2 text-base text-primary transition-colors hover:text-primary/80"
+              >
+                <FileText className="h-4 w-4" />
+                View / Download Resume
               </a>
             </div>
             <div>

@@ -1,4 +1,4 @@
-import { Github, Linkedin, ArrowDown } from "lucide-react"
+﻿import { Github, Linkedin, ArrowDown, Download } from "lucide-react"
 
 export function Hero() {
   return (
@@ -17,7 +17,7 @@ export function Hero() {
           SLAM &middot; Sensor Fusion &middot; 3D Perception &middot; Teaching
         </p>
 
-        <div className="mt-8 flex items-center justify-center gap-4">
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
           <a
             href="https://github.com/sarveshangadi09"
             target="_blank"
@@ -35,6 +35,16 @@ export function Hero() {
           >
             <Linkedin className="h-4 w-4" />
             LinkedIn
+          </a>
+          <a
+            href="/Resume_UT_03.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            download
+            className="inline-flex items-center gap-2 rounded-lg border border-primary/40 bg-primary/5 px-5 py-2.5 text-sm font-medium text-primary transition-colors hover:bg-primary/10"
+          >
+            <Download className="h-4 w-4" />
+            Resume
           </a>
         </div>
       </div>
