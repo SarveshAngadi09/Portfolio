@@ -8,6 +8,7 @@ import { useTheme } from "next-themes"
 const navLinks = [
   { label: "About", href: "#about" },
   { label: "Experience", href: "#experience" },
+  { label: "Publications", href: "#publications" },
   { label: "Projects", href: "#projects" },
   { label: "Teaching", href: "#teaching" },
   { label: "Blog", href: "#blog" },

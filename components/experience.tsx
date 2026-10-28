@@ -36,7 +36,7 @@ const contributions = [
 
 export function Experience() {
   return (
-    <section id="experience" className="px-6 py-24">
+    <section id="experience" className="bg-muted/50 px-6 py-24">
       <div className="mx-auto max-w-5xl">
         <SectionLabel label="Industry Experience" />
         <div className="mt-2 flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">

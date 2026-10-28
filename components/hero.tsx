@@ -11,10 +11,10 @@ export function Hero() {
           Sarvesh Angadi
         </h1>
         <h2 className="mt-4 text-xl font-medium text-foreground/80 sm:text-2xl">
-          Robotics Engineer — Multimodal SLAM & 3D Perception
+          Computer Vision & Robotics Engineer — 3D Perception & Foundation Models
         </h2>
         <p className="mt-3 font-mono text-sm tracking-wide text-muted-foreground">
-          SLAM &middot; Sensor Fusion &middot; 3D Perception &middot; Teaching
+          3D Reconstruction &middot; OOD Robustness &middot; Robot Perception &middot; Edge Deployment
         </p>
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
@@ -37,7 +37,7 @@ export function Hero() {
             LinkedIn
           </a>
           <a
-            href="./Resume_UT_03.pdf"
+            href="./Sarvesh_Angadi_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             download

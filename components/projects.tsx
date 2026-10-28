@@ -3,27 +3,19 @@ import { SectionLabel } from "./about"
 
 const projects = [
   {
-    title: "Multimodal SLAM for Dynamic Industrial Environments",
+    title: "Cross-Domain Generalization of VGGT-Ω",
     description:
-      "MSc thesis developing robust SLAM for legged robot platforms operating in dynamic industrial settings. Fuses thermal, RGB, depth, and LiDAR sensor streams to achieve reliable localization and mapping with unannotated data, addressing moving objects, variable lighting, and sensor noise unique to industrial floors.",
-    stack: ["ROS2", "LiDAR SLAM", "Sensor Fusion", "Gaussian Splatting", "Legged Robotics"],
+      "MSc thesis improving the out-of-distribution depth and pose accuracy of a feed-forward 3D reconstruction foundation model. Adapts a frozen backbone with lightweight modules (Bridge causal modules, parameter-efficient fine-tuning) so the model holds up on domains it was not trained on.",
+    stack: ["PyTorch", "VGGT-Ω", "DINOv3", "PEFT", "3D Reconstruction"],
     github: null,
     inProgress: true,
     statusLabel: "In Progress (MSc Thesis)",
   },
   {
-    title: "Depth-Aware Few-Shot Action Recognition",
-    description:
-      "Developing a few-shot action recognition system that leverages depth information to improve generalisation to unseen action classes. Explores metric learning and depth-conditioned feature representations for robust human action understanding from limited labelled examples.",
-    stack: ["PyTorch", "Few-Shot Learning", "Depth Estimation", "Action Recognition"],
-    github: null,
-    inProgress: true,
-  },
-  {
     title: "Vision-Conditioned Trajectory Generation with Flow Matching",
     description:
       "Conditional and mean flow matching models for vision-conditioned robotic trajectory generation. Trained and evaluated on the PushT dataset, demonstrating smooth, multimodal trajectory distributions guided by visual observations.",
-    stack: ["PyTorch", "Flow Matching", "GenAI", "Robotics"],
+    stack: ["PyTorch", "Flow Matching", "Robot Learning"],
     github: "https://github.com/SarveshAngadi09/TrajectoryGenerationFlowmatching",
     inProgress: false,
   },
@@ -46,7 +38,7 @@ export function Projects() {
           Selected work
         </h2>
         <p className="mt-4 max-w-xl text-base text-muted-foreground">
-          Open-source projects and research implementations spanning perception, calibration, and deep learning for robotics.
+          Research and open-source implementations spanning 3D reconstruction, robustness, and generative models for robotics.
         </p>
 
         <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">

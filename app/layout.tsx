@@ -9,10 +9,10 @@ const _jetbrains = JetBrains_Mono({ subsets: ['latin'], variable: '--font-jetbra
 
 export const metadata: Metadata = {
   title: 'Sarvesh Angadi | Robotics & Computer Vision Engineer',
-  description: 'Personal portfolio of Sarvesh Angadi — Robotics & Computer Vision engineer specializing in perception systems, deep learning, and camera calibration.',
+  description: 'Personal portfolio of Sarvesh Angadi — Robotics & Computer Vision engineer specializing in 3D perception, robust vision foundation models, and robot perception.',
   openGraph: {
     title: 'Sarvesh Angadi | Robotics & Computer Vision Engineer',
-    description: 'Personal portfolio of Sarvesh Angadi — Robotics & Computer Vision engineer specializing in perception systems, deep learning, and camera calibration.',
+    description: 'Personal portfolio of Sarvesh Angadi — Robotics & Computer Vision engineer specializing in 3D perception, robust vision foundation models, and robot perception.',
     url: 'https://sarveshangadi09.github.io/Portfolio',
     siteName: 'Sarvesh Angadi',
     type: 'website',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Sarvesh Angadi | Robotics & Computer Vision Engineer',
-    description: 'Robotics & Computer Vision engineer specializing in perception systems, deep learning, and camera calibration.',
+    description: 'Robotics & Computer Vision engineer specializing in 3D perception, robust vision foundation models, and robot perception.',
   },
 }
 
