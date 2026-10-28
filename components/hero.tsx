@@ -38,7 +38,7 @@ export function Hero() {
             Computer Vision & Robotics Engineer — 3D Perception & Foundation Models
           </h2>
           <p className="mt-4 font-mono text-sm text-muted-foreground sm:text-base">
-            <span className="text-primary">$</span> I build{" "}
+            <span className="text-primary">{">"}</span> I build{" "}
             <Typewriter
               words={[
                 "3D reconstruction systems",
