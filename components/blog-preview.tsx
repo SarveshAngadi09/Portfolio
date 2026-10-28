@@ -37,9 +37,9 @@ export function BlogPreview() {
   return (
     <section id="blog" className="bg-muted/50 px-6 py-24">
       <div className="mx-auto max-w-5xl">
-        <SectionLabel label="Blog" />
+        <SectionLabel index="06" label="Blog" />
         <div className="mt-2 flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          <h2 className="reveal text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Recent writing
           </h2>
           <a
@@ -63,7 +63,7 @@ export function BlogPreview() {
               href={post.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex flex-col rounded-xl border border-border bg-card p-6 transition-all hover:border-primary/30 hover:shadow-sm"
+              className="group flex flex-col glow-card reveal rounded-xl border border-border bg-card p-6 transition-all hover:border-primary/30 hover:shadow-sm"
             >
               <div className="mb-3 flex items-center gap-3">
                 <span className="rounded-md bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">

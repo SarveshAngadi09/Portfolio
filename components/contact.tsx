@@ -28,8 +28,8 @@ export function Contact() {
   return (
     <section id="contact" className="px-6 py-24">
       <div className="mx-auto max-w-5xl">
-        <SectionLabel label="Contact" />
-        <h2 className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+        <SectionLabel index="07" label="Contact" />
+        <h2 className="mt-2 reveal text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
           {"Let's connect"}
         </h2>
         <p className="mt-4 max-w-xl text-base text-muted-foreground">
@@ -77,7 +77,7 @@ export function Contact() {
             </div>
             <button
               type="submit"
-              className="inline-flex items-center justify-center gap-2 rounded-lg bg-foreground px-5 py-2.5 text-sm font-medium text-background transition-opacity hover:opacity-90"
+              className="bg-gradient-brand inline-flex items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-transform hover:-translate-y-0.5"
             >
               {sent ? "Opening email client…" : (<><Send className="h-4 w-4" /> Send Message</>)}
             </button>

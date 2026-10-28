@@ -8,6 +8,7 @@ import { Teaching } from "@/components/teaching"
 import { BlogPreview } from "@/components/blog-preview"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
+import { Effects } from "@/components/effects"
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <Effects />
     </>
   )
 }

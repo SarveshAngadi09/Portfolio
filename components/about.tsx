@@ -53,8 +53,8 @@ export function About() {
   return (
     <section id="about" className="px-6 py-24">
       <div className="mx-auto max-w-5xl">
-        <SectionLabel label="About" />
-        <h2 className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+        <SectionLabel index="01" label="About" />
+        <h2 className="mt-2 reveal text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
           Robust 3D perception, from research to edge hardware
         </h2>
         <p className="mt-6 text-base leading-relaxed text-muted-foreground">
@@ -75,7 +75,7 @@ export function About() {
           {highlights.map((item) => (
             <div
               key={item.title}
-              className="group rounded-xl border border-border bg-card p-6 transition-colors hover:border-primary/30"
+              className="group glow-card reveal rounded-xl border border-border bg-card p-6 transition-colors hover:border-primary/30"
             >
               <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
                 <item.icon className="h-5 w-5" />
@@ -108,7 +108,7 @@ export function About() {
               {skills.map((skill) => (
                 <span
                   key={skill}
-                  className="rounded-md bg-primary/8 px-2 py-0.5 font-mono text-xs text-primary"
+                  className="rounded-md bg-primary/10 px-2 py-0.5 font-mono text-xs text-primary"
                 >
                   {skill}
                 </span>
@@ -121,11 +121,12 @@ export function About() {
   )
 }
 
-function SectionLabel({ label }: { label: string }) {
+function SectionLabel({ label, index }: { label: string; index?: string }) {
   return (
-    <div className="flex items-center gap-3">
-      <span className="h-px w-8 bg-primary" />
-      <span className="font-mono text-sm tracking-widest text-primary uppercase">{label}</span>
+    <div className="reveal flex items-center gap-3 font-mono text-sm tracking-widest uppercase">
+      {index && <span className="text-muted-foreground">{index}</span>}
+      <span className="bg-gradient-brand h-px w-8" />
+      <span className="text-primary">{label}</span>
     </div>
   )
 }

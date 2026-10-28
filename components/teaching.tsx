@@ -17,8 +17,8 @@ export function Teaching() {
   return (
     <section id="teaching" className="px-6 py-24">
       <div className="mx-auto max-w-5xl">
-        <SectionLabel label="Teaching & Talks" />
-        <h2 className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+        <SectionLabel index="05" label="Teaching & Talks" />
+        <h2 className="mt-2 reveal text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
           Workshops & presentations
         </h2>
         <p className="mt-4 max-w-xl text-base text-muted-foreground">
@@ -29,7 +29,7 @@ export function Teaching() {
           {talks.map((talk, i) => (
             <div
               key={i}
-              className="group rounded-xl border border-border bg-card p-6 transition-colors hover:border-primary/30"
+              className="group glow-card reveal rounded-xl border border-border bg-card p-6 transition-colors hover:border-primary/30"
             >
               <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                 <div className="flex-1">

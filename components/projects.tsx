@@ -33,8 +33,8 @@ export function Projects() {
   return (
     <section id="projects" className="bg-muted/50 px-6 py-24">
       <div className="mx-auto max-w-5xl">
-        <SectionLabel label="Projects" />
-        <h2 className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+        <SectionLabel index="04" label="Projects" />
+        <h2 className="mt-2 reveal text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
           Selected work
         </h2>
         <p className="mt-4 max-w-xl text-base text-muted-foreground">
@@ -45,16 +45,17 @@ export function Projects() {
           {projects.map((project) => (
             <article
               key={project.title}
-              className="group flex flex-col rounded-xl border border-border bg-card p-6 transition-all hover:border-primary/30 hover:shadow-sm"
+              className="group flex flex-col glow-card reveal rounded-xl border border-border bg-card p-6 transition-all hover:border-primary/30 hover:shadow-sm"
             >
+              {project.inProgress && (
+                <span className="mb-3 inline-flex w-fit items-center gap-1.5 rounded-md bg-amber-500/10 px-2 py-0.5 font-mono text-xs text-amber-500">
+                  <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-amber-500 motion-reduce:animate-none" />
+                  {project.statusLabel ?? "In Progress"}
+                </span>
+              )}
               <div className="mb-3 flex items-start justify-between gap-2">
                 <h3 className="text-base font-semibold text-card-foreground">{project.title}</h3>
                 <div className="flex shrink-0 items-center gap-2">
-                  {project.inProgress && (
-                    <span className="rounded-md bg-amber-500/10 px-2 py-0.5 font-mono text-xs text-amber-500">
-                      {project.statusLabel ?? "In Progress"}
-                    </span>
-                  )}
                   {project.github && (
                     <a
                       href={project.github}
@@ -75,7 +76,7 @@ export function Projects() {
                 {project.stack.map((tech) => (
                   <span
                     key={tech}
-                    className="rounded-md bg-primary/8 px-2 py-0.5 font-mono text-xs text-primary"
+                    className="rounded-md bg-primary/10 px-2 py-0.5 font-mono text-xs text-primary"
                   >
                     {tech}
                   </span>

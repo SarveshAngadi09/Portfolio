@@ -1,4 +1,3 @@
-import { BookOpen } from "lucide-react"
 import { SectionLabel } from "./about"
 
 const SELF = "S. Angadi"
@@ -7,6 +6,7 @@ const publications = [
   {
     title: "Trusting MedSAM under Distribution Shift",
     authors: ["S. Angadi", "A. Briassouli"],
+    short: "ACCV '26",
     venue: "ACCV 2026 Workshop on Trustworthy Foundation Models in Imaging (TrustFMI)",
     status: "Accepted · Oral",
   },
@@ -22,6 +22,7 @@ const publications = [
       "J. Guo",
       "E. Talavera",
     ],
+    short: "WACV '27",
     venue: "WACV 2027",
     status: "Accepted",
   },
@@ -31,8 +32,8 @@ export function Publications() {
   return (
     <section id="publications" className="px-6 py-24">
       <div className="mx-auto max-w-5xl">
-        <SectionLabel label="Publications" />
-        <h2 className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+        <SectionLabel index="03" label="Publications" />
+        <h2 className="mt-2 reveal text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
           Research
         </h2>
         <p className="mt-4 max-w-xl text-base text-muted-foreground">
@@ -43,12 +44,12 @@ export function Publications() {
           {publications.map((pub) => (
             <article
               key={pub.title}
-              className="group rounded-xl border border-border bg-card p-6 transition-colors hover:border-primary/30"
+              className="group glow-card reveal rounded-xl border border-border bg-card p-6 transition-colors hover:border-primary/30"
             >
               <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                 <div className="flex gap-4">
-                  <div className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                    <BookOpen className="h-5 w-5" />
+                  <div className="flex h-14 w-20 shrink-0 items-center justify-center rounded-lg border border-border bg-background/60">
+                    <span className="text-gradient font-mono text-sm font-bold">{pub.short}</span>
                   </div>
                   <div>
                     <h3 className="text-base font-semibold text-card-foreground">{pub.title}</h3>

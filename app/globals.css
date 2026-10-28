@@ -10,25 +10,25 @@
 
 @layer base {
   :root {
-    --background: 210 20% 99%;
-    --foreground: 215 25% 12%;
+    --background: 220 33% 98%;
+    --foreground: 228 30% 10%;
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 12%;
+    --card-foreground: 228 30% 10%;
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 12%;
-    --primary: 213 80% 50%;
+    --popover-foreground: 228 30% 10%;
+    --primary: 192 90% 36%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 210 15% 96%;
-    --secondary-foreground: 215 25% 12%;
-    --muted: 210 15% 96%;
-    --muted-foreground: 215 10% 46%;
-    --accent: 213 80% 50%;
+    --secondary: 220 25% 95%;
+    --secondary-foreground: 228 30% 10%;
+    --muted: 220 25% 95%;
+    --muted-foreground: 225 10% 42%;
+    --accent: 262 70% 55%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 214 15% 91%;
-    --input: 214 15% 91%;
-    --ring: 213 80% 50%;
+    --border: 222 20% 89%;
+    --input: 222 20% 89%;
+    --ring: 192 90% 36%;
     --chart-1: 213 80% 50%;
     --chart-2: 173 58% 39%;
     --chart-3: 197 37% 24%;
@@ -46,25 +46,25 @@
   }
 
   .dark {
-    --background: 222 25% 8%;
-    --foreground: 210 20% 96%;
-    --card: 222 22% 11%;
-    --card-foreground: 210 20% 96%;
-    --popover: 222 22% 11%;
-    --popover-foreground: 210 20% 96%;
-    --primary: 213 80% 60%;
-    --primary-foreground: 222 25% 8%;
-    --secondary: 222 18% 16%;
-    --secondary-foreground: 210 20% 96%;
-    --muted: 222 18% 16%;
-    --muted-foreground: 215 12% 65%;
-    --accent: 213 80% 60%;
-    --accent-foreground: 222 25% 8%;
+    --background: 230 35% 5%;
+    --foreground: 220 30% 96%;
+    --card: 230 30% 8%;
+    --card-foreground: 220 30% 96%;
+    --popover: 230 30% 8%;
+    --popover-foreground: 220 30% 96%;
+    --primary: 188 95% 55%;
+    --primary-foreground: 230 35% 5%;
+    --secondary: 230 25% 12%;
+    --secondary-foreground: 220 30% 96%;
+    --muted: 230 25% 10%;
+    --muted-foreground: 222 14% 66%;
+    --accent: 262 88% 72%;
+    --accent-foreground: 230 35% 5%;
     --destructive: 0 70% 55%;
     --destructive-foreground: 0 0% 98%;
-    --border: 222 16% 20%;
-    --input: 222 16% 20%;
-    --ring: 213 80% 60%;
+    --border: 230 20% 16%;
+    --input: 230 20% 16%;
+    --ring: 188 95% 55%;
     --chart-1: 213 80% 60%;
     --chart-2: 173 58% 49%;
     --chart-3: 197 37% 54%;
@@ -92,4 +92,84 @@
   html {
     scroll-behavior: smooth;
   }
+}
+
+@layer utilities {
+  .text-gradient {
+    background-image: linear-gradient(100deg, hsl(var(--primary)), hsl(var(--accent)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .bg-gradient-brand {
+    background-image: linear-gradient(100deg, hsl(var(--primary)), hsl(var(--accent)));
+  }
+
+  /* Faint engineering grid that fades out toward the edges */
+  .bg-grid {
+    background-image:
+      linear-gradient(hsl(var(--border) / 0.7) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border) / 0.7) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 20%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 20%, transparent 75%);
+  }
+}
+
+/* Cursor spotlight on cards: GlowTracker sets --mx / --my on the hovered card */
+.glow-card {
+  position: relative;
+  transition: border-color 0.3s, translate 0.3s;
+}
+.glow-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: radial-gradient(260px circle at var(--mx, 50%) var(--my, 50%), hsl(var(--primary) / 0.9), hsl(var(--accent) / 0.5) 40%, transparent 70%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+.glow-card:hover {
+  background-image: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), hsl(var(--primary) / 0.07), transparent 45%);
+  translate: 0 -2px;
+}
+.glow-card:hover::before {
+  opacity: 1;
+}
+
+/* Scroll reveal: only hides content once JS has confirmed it can reveal it again */
+.reveal-ready .reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal-ready .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+.reveal-ready .grid > .reveal:nth-child(2),
+.reveal-ready .space-y-4 > .reveal:nth-child(2) { transition-delay: 80ms; }
+.reveal-ready .grid > .reveal:nth-child(3) { transition-delay: 160ms; }
+.reveal-ready .grid > .reveal:nth-child(4) { transition-delay: 240ms; }
+.reveal-ready .grid > .reveal:nth-child(5) { transition-delay: 320ms; }
+
+.caret {
+  animation: caret-blink 1s steps(1) infinite;
+}
+@keyframes caret-blink {
+  50% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal-ready .reveal { opacity: 1; transform: none; transition: none; }
+  .glow-card, .glow-card:hover { translate: none; }
+  .caret { animation: none; }
 }

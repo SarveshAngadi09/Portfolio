@@ -38,9 +38,9 @@ export function Experience() {
   return (
     <section id="experience" className="bg-muted/50 px-6 py-24">
       <div className="mx-auto max-w-5xl">
-        <SectionLabel label="Industry Experience" />
+        <SectionLabel index="02" label="Industry Experience" />
         <div className="mt-2 flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          <h2 className="reveal text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             CynLr — Cybernetics Laboratory
           </h2>
           <span className="font-mono text-sm text-muted-foreground">July 2020 – Aug 2025</span>
@@ -53,11 +53,11 @@ export function Experience() {
           vision pipelines. Delivered end-to-end demos and commercial prototypes for industry partners.
         </p>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {contributions.map((item) => (
             <div
               key={item.title}
-              className="group rounded-xl border border-border bg-card p-6 transition-colors hover:border-primary/30"
+              className="group glow-card reveal rounded-xl border border-border bg-card p-6 transition-colors hover:border-primary/30"
             >
               <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
                 <item.icon className="h-5 w-5" />

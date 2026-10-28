@@ -40,12 +40,25 @@ function ThemeToggle() {
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [progress, setProgress] = useState(0)
+
+  useEffect(() => {
+    function onScroll() {
+      const max = document.documentElement.scrollHeight - window.innerHeight
+      setProgress(max > 0 ? window.scrollY / max : 0)
+    }
+    onScroll()
+    window.addEventListener("scroll", onScroll, { passive: true })
+    return () => window.removeEventListener("scroll", onScroll)
+  }, [])
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        <a href="#" className="text-lg font-semibold tracking-tight text-foreground">
-          {"<CV />"}
+        <a href="#" className="font-mono text-lg font-bold tracking-tight">
+          <span className="text-muted-foreground">{"<"}</span>
+          <span className="text-gradient">SA</span>
+          <span className="text-muted-foreground">{" />"}</span>
         </a>
 
         {/* Desktop */}
@@ -77,6 +90,11 @@ export function Navbar() {
           </button>
         </div>
       </nav>
+      <div
+        className="bg-gradient-brand absolute bottom-0 left-0 h-px origin-left"
+        style={{ width: "100%", transform: `scaleX(${progress})` }}
+        aria-hidden="true"
+      />
 
       {/* Mobile menu */}
       {mobileOpen && (
